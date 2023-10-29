@@ -1,17 +1,20 @@
-package org.example;
+package org.example.sem1;
 
-public class Cat {
+public class Cat extends Animal {
     // По умолчанию модификатор доступа default но его не пишут
     // default String name;
-    private String name; // если с большой буквы то name -> null
+    // private String name; // если с большой буквы то name -> null
     private String color;
     private Integer age; // если с маленькой буквы то age -> 0
     // Конструктор
     public Cat(String name, String color, Integer age) {
-        this.name = name;
-        this.color = color;
-        this.age = age;
+        super(name); // Унаследованное поле
+        // this.name = nam e; Убрали так как это поле Cat унаследовало от класса Animal
+        this.color = color; // Поле класса Cat (его нет в родительском классе)
+        this.age = age; // тоже новое поле
     }
+
+
     // default - ный конструктор
     // Если нет стандартного конструктора, по умолчанию он есть. Его не нужно создавать
     // Но при создании стандартного конструктора
@@ -26,14 +29,16 @@ public class Cat {
     // Курсор наводим на имя класса Cat и нажимаем на Alt + insert
     // В появившемся меню выбираем Getter and Setter
     // Далее выбираем поле и нажимаем Ok
+    /**
     public String getName() {
         return name;
     }
-
+    **/
+    /**
     public void setName(String name) {
         this.name = name;
     }
-
+    **/
     public String getColor() {
         return color;
     }
@@ -53,5 +58,32 @@ public class Cat {
         else {
             System.out.println("Введен некорректный возраст");
         }
+    }
+
+    @Override
+    protected void animalinfo() {
+        // super.animalinfo();
+        System.out.println("Инфо о коте: \n" + toString());
+    }
+
+    @Override
+    protected void voice() {
+        // super.voice();
+        System.out.println("Кот издает звук!");
+    }
+
+    @Override
+    protected void jump() {
+        // super.jump();
+        System.out.println("Кот прыгает!");
+    }
+
+    @Override
+    public String toString() {
+        return "Cat{" +
+                "color='" + color + '\'' +
+                ", age=" + age +
+                ", name='" + name + '\'' +
+                '}';
     }
 }

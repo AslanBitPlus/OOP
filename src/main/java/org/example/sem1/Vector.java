@@ -1,4 +1,4 @@
-package org.example;
+package org.example.sem1;
 
 public class Vector {
     private Integer x;

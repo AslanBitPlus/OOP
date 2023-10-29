@@ -1,4 +1,4 @@
-package org.example;
+package org.example.sem1;
 
 
 // Press Shift twice to open the Search Everywhere dialog and type `show whitespaces`,
@@ -26,6 +26,16 @@ public class Main {
         System.out.println("Кот 2: \n Имя - " + cat2.getName()
                 + "\n Цвет- " + cat2.getColor() + "\n Возраст- " + cat2.getAge());
 
+        // Создаем родительский класс для класса  Cat
+        Animal animal1 = new Animal();
+        System.out.println(cat1);
+        Animal animal2 = new Animal("Конь");
+        animal2.animalinfo();
+        animal2.voice();
+        animal2.jump();
+        cat1.animalinfo();
+        cat1.voice();
+        cat1.jump();
 
         // Создаем класс Vector. и метод определения длины вектора
         // и скалярного произведения
