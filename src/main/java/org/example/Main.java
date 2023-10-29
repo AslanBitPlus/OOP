@@ -28,13 +28,20 @@ public class Main {
 
 
         // Создаем класс Vector. и метод определения длины вектора
+        // и скалярного произведения
         Vector vector1 = new Vector(1, 1, 5);
         Vector vector2 = new Vector(0, 5, 2);
         System.out.println("vector1 = " + vector1);
         System.out.println("vector2 = " + vector2);
-        System.out.println("vector1 length = " + vector1.lengthVector());
-        System.out.println("vector2 length = " + vector2.lengthVector());
 
+        System.out.println("Длина вектора 1 = " + vector1.lengthVector());
+        System.out.println("Длина вектора 2 = " + vector2.lengthVector());
+
+        System.out.println("Скалярное произведение вектора1 на вектор2 = " + vector1.scolar(vector2));
+
+        System.out.println("Векторное произведение вектора1 на вектор2 = " + vector1.multivector(vector2));
+
+        System.out.println("Косинус угла между вектором1 и вектором2 = " + vector1.cosanglebetvectors(vector2));
     }
 
 }
