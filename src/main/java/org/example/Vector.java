@@ -40,10 +40,18 @@ public class Vector {
 
     @Override
     public String toString() {
-        return "Vector{" +
+        return "{" +
                 "x=" + x +
                 ", y=" + y +
                 ", z=" + z +
                 '}';
+    }
+
+    /**
+     *
+     * @return Длина вектора
+     */
+    public double lengthVector() {
+        return Math.sqrt(x*x + y*y + z*z);
     }
 }

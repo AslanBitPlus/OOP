@@ -26,11 +26,14 @@ public class Main {
         System.out.println("Кот 2: \n Имя - " + cat2.getName()
                 + "\n Цвет- " + cat2.getColor() + "\n Возраст- " + cat2.getAge());
 
+
+        // Создаем класс Vector. и метод определения длины вектора
         Vector vector1 = new Vector(1, 1, 5);
-        Vector vector2 = new Vector(1, 5, 2);
+        Vector vector2 = new Vector(0, 5, 2);
         System.out.println("vector1 = " + vector1);
         System.out.println("vector2 = " + vector2);
-
+        System.out.println("vector1 length = " + vector1.lengthVector());
+        System.out.println("vector2 length = " + vector2.lengthVector());
 
     }
 
