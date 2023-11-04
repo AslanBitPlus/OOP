@@ -1,9 +1,9 @@
 package org.example.sem1;
 
-
 // Press Shift twice to open the Search Everywhere dialog and type `show whitespaces`,
 // then press Enter. You can now see whitespace characters in your code.
 public class Main {
+    private final Integer COUNT_CROCODILE = 2;
     public static void main(String[] args) {
         // Создать класс Cat с полями: Имя, цвет, кол-во лет
         // Alt + Enter или правой кн.мыши по org.example -> New -> Java Class (указать имя класса) + Enter
@@ -52,6 +52,7 @@ public class Main {
         System.out.println("Векторное произведение вектора1 на вектор2 = " + vector1.multivector(vector2));
 
         System.out.println("Косинус угла между вектором1 и вектором2 = " + vector1.cosanglebetvectors(vector2));
+
     }
 
 }
