@@ -33,13 +33,22 @@ public class Main {
         Animal animal = new Animal() {
             @Override
             public void animalInfo() {
-
+                System.out.println("asd");
             }
         };
         System.out.println(animal.getClass().getName());
 
-        Animal dog = new Dog();
+        Animal dog = new Dog("Бобик");
         System.out.println(dog.getClass().getName());
+        Animal[] animals = {
+                new Cat("Вася", "red", 3),
+                new Dog("Стрелка"),
+                new Cat("Муся", "green", 2)
+        };
+        for (Animal element : animals) {
+            element.animalInfo();
+            
+        }
     }
 
     private static void qwe() {
