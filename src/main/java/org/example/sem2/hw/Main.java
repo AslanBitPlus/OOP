@@ -45,6 +45,7 @@ public class Main {
                 if (pl.maxRunDistance < pr.dist && pl.maxJumpDistance < pr.dist) {
                     playcount --;
                     System.out.println(pl.name + " Выбыл из игры!");
+                    // Удалить player из игры ?????
                 }
             }
         }
