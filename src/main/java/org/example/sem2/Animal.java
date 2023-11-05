@@ -11,7 +11,10 @@ public abstract class Animal {
         this.name = name;
     }
 
-    public abstract void animalInfo();
+    public abstract void animalInfo(); // Когда прописываем abstract
+    // появляется значок слева (зеленый) интерфейсный метод.
+    // Необходимо удалить тело метода. Переводим и класс Animal тоже
+    // в abstract
 
     public void voice() {
         System.out.println("Звук!");
