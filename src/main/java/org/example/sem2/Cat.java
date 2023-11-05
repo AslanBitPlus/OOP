@@ -65,4 +65,8 @@ public class Cat extends Animal{
     public void jump() {
         System.out.println("прыжек кота! ");
     }
+
+    public void clubok() {
+        System.out.println(name + " Свернулся в клубок!");
+    }
 }

@@ -19,6 +19,8 @@ public class Main {
         cat.voice();
         cat.animalInfo();
 
+        // cat.clubok();
+
         qwe();  // Нажав на Alt+Enter, создается static метод
                 // Static метод вызывается из static метода
                 // со static методом не используются this и super
@@ -49,10 +51,26 @@ public class Main {
             element.animalInfo();
             
         }
+
+        cat.clubok();
+
+        for (Animal element : animals) { // Ctrl+ пробел после точки выводит все методы...
+            if (element instanceof Cat) { // Проверка является ли element класса Cat
+                ((Cat) element).clubok(); // применили свернутся в клубок к элементам типа Cat
+            } else { // делаем cust
+                System.out.println(element.name + " Не умеет сворачиваться в клубок!");
+            }
+
+
+
+        }
     }
+
 
     private static void qwe() {
         System.out.println("qwe");
     }
+
+
 
 }
