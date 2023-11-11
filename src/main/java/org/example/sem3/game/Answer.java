@@ -29,24 +29,12 @@ public class Answer {
         return numTry;
     }
 
-    public void setNumTry(Integer numTry) {
-        this.numTry = numTry;
-    }
-
     public Integer getCow() {
         return cow;
     }
 
-    public void setCow(Integer cow) {
-        this.cow = cow;
-    }
-
     public Integer getBull() {
         return bull;
-    }
-
-    public void setBull(Integer bull) {
-        this.bull = bull;
     }
 
     @Override

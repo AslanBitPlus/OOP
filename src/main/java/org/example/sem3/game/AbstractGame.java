@@ -19,6 +19,7 @@ public abstract class AbstractGame implements Game {
     }
     private String generateWord(Integer sizeWord) {
         List<String> alf = generateCharList();
+        // List<String> alf = generateEnCharList();
         String resultWord = "";
         for (int i = 0; i < sizeWord; i++) {
             Integer ind = new Random().nextInt(alf.size());
@@ -29,6 +30,8 @@ public abstract class AbstractGame implements Game {
     }
 
     protected abstract List<String> generateCharList();
+    protected abstract List<String> generateEnCharList();
+    protected abstract List<String> generateRuCharList();
 
     @Override
     public Answer inputValue(String value) {
