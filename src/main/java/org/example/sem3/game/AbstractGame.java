@@ -8,18 +8,22 @@ public abstract class AbstractGame implements Game {
     private  Integer maxTry;
     private GameStatus status;
     private String word;
+    // private Integer profile;
 
     @Override
     public void start(Integer sizeWord, Integer maxTry) {
         this.sizeWord = sizeWord;
         this.maxTry = maxTry;
+        // this.profile = profile;
         this.status = GameStatus.ACTIVE;
         this.word = generateWord(sizeWord);
         System.out.println(word);
     }
     private String generateWord(Integer sizeWord) {
-        List<String> alf = generateCharList();
+        // List<String> alf = generateCharList();
+
         // List<String> alf = generateEnCharList();
+        List<String> alf = generateRuCharList();
         String resultWord = "";
         for (int i = 0; i < sizeWord; i++) {
             Integer ind = new Random().nextInt(alf.size());

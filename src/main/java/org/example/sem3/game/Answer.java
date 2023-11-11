@@ -37,6 +37,8 @@ public class Answer {
         return bull;
     }
 
+
+
     @Override
     public String toString() {
         return "Answer{" +

@@ -7,9 +7,11 @@ public class Main {
         //
         NumberGame numberGame = new NumberGame();
         numberGame.start(4, 6);
+
         Scanner scanner = new Scanner(System.in);
         while (numberGame.getGameStatus().equals(GameStatus.ACTIVE)) {
             Answer answer = numberGame.inputValue(scanner.nextLine());
+            // установка профиля игры выбор алфавита
             System.out.println("answer = " + answer);
         }
         if (numberGame.getGameStatus().equals(GameStatus.WIN)) {
