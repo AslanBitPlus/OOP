@@ -30,26 +30,35 @@ public class UserService implements DataService{
 
     private int maxStudentId() {
         int result = 0;
-        for (int i = 0; i < listUser.size() - 1; i++) {
+        for (int i = 0; i < listUser.size(); i++) {
             if (listUser.get(i) instanceof Student) {
-                return i + 1;
+                result ++;
             }
         }
-        return 0;
+        return result;
     }
 
     private int maxTeacherId() {
         int result = 0;
         for (int i = 0; i < listUser.size() - 1; i++) {
             if (listUser.get(i) instanceof Teacher) {
-                return i + 1;
+                result ++;
             }
         }
-        return 0;
+        return result;
     }
 
     @Override
     public List<User> read() {
+        System.out.println("Список студентов");
+        for (int i = 0; i < listUser.size(); i++) {
+            if (listUser.get(i) instanceof Student) {
+                System.out.println("id(" + ((Student) listUser.get(i)).getId() +
+                        ") - {Имя - '" + ((Student) listUser.get(i)).getName() +
+                        ", Фамилия - '" + ((Student) listUser.get(i)).getSecondName() +
+                        ", год - " + ((Student) listUser.get(i)).getYear());
+            }
+        }
         return null;
     }
     //

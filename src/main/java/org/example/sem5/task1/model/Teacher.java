@@ -16,4 +16,12 @@ public class Teacher extends User{
     public void setId(Integer id) {
         this.id = id;
     }
+
+    @Override
+    public String toString() {
+        return "id(" + id +
+                ") - {Имя - '" + getName() + '\'' +
+                ", Фамилия - '" + getSecondName() + '\'' +
+                ", год - " + getYear() + "}";
+    }
 }
